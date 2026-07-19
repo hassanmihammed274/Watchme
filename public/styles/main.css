@@ -1,64 +1,233 @@
-/* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+/* Navigation */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff !important;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 100px 0;
-    text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 100px 0 !important;
 }
 
 .hero h1 {
-    font-weight: 700;
-    margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-.hero .lead {
-    font-size: 1.3rem;
-    margin-bottom: 30px;
+.hero p {
+  font-size: 1.25rem;
 }
 
 /* Cards */
 .card {
-    border: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 10px;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Navigation */
-.navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
+.card-body {
+  padding: 1.5rem;
+}
+
+.card-title {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: #667eea;
+  border-color: #667eea;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #764ba2;
+  border-color: #764ba2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.btn-danger {
+  border-radius: 8px;
 }
 
 /* Footer */
 footer {
-    margin-top: auto;
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  margin-top: 50px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.alert-success {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+/* Badge */
+.badge {
+  padding: 0.5rem 0.75rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.badge.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+/* Product Container */
+#products-container {
+  margin-top: 2rem;
+}
+
+#products-container .col-md-4 {
+  margin-bottom: 2rem;
+}
+
+/* Cart Section */
+#cart-items {
+  margin-top: 2rem;
+}
+
+#cart-items .card {
+  margin-bottom: 1rem;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2rem;
-    }
-    
-    .hero .lead {
-        font-size: 1rem;
-    }
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .card {
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-lg {
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+/* Loading Animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading {
+  animation: spin 1s linear infinite;
+}
+
+/* Transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: #667eea !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Custom Styles */
+.navbar-nav .nav-link {
+  margin: 0 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding-left: 1rem;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.product-rating {
+  color: #ffc107;
+  font-size: 1.1rem;
 }

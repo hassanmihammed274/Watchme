@@ -21,16 +21,22 @@
                         <a class="nav-link" href="/">الرئيسية</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/products">المنتجات</a>
+                        <a class="nav-link" href="/pages/products.html">المنتجات</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/about">عننا</a>
+                        <a class="nav-link" href="/pages/about.html">عننا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/contact">اتصل بنا</a>
+                        <a class="nav-link" href="/pages/contact.html">اتصل بنا</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/cart">🛒 السلة</a>
+                        <a class="nav-link" href="/pages/cart.html">🛒 السلة <span class="badge bg-danger cart-badge">0</span></a>
+                    </li>
+                    <li class="nav-item" id="login-link">
+                        <a class="nav-link" href="/pages/login.html">دخول</a>
+                    </li>
+                    <li class="nav-item" id="logout-link" style="display: none;">
+                        <a class="nav-link" href="#" onclick="logout()">خروج</a>
                     </li>
                 </ul>
             </div>
@@ -42,7 +48,7 @@
         <div class="container text-center">
             <h1 class="display-4 mb-4">مرحباً بك في Watchme</h1>
             <p class="lead mb-4">أفضل المكملات الغذائية لصحتك وعافيتك</p>
-            <button class="btn btn-primary btn-lg">ابدأ التسوق</button>
+            <a href="/pages/products.html" class="btn btn-primary btn-lg">ابدأ التسوق</a>
         </div>
     </section>
 
@@ -52,16 +58,6 @@
             <h2 class="mb-5 text-center">المنتجات المميزة</h2>
             <div class="row g-4" id="products-container">
                 <!-- Products will be loaded here -->
-                <div class="col-md-4">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">منتج 1</h5>
-                            <p class="card-text">وصف المنتج</p>
-                            <p class="text-primary fw-bold">السعر: 99 ريال</p>
-                            <button class="btn btn-primary w-100">أضف للسلة</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
